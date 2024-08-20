@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+    /* background: rgb(39, 37, 37); */
+    /* text-align: right; */
+}
+
+
+/* Project - Image Slider */
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider img{
+  width: 60%;
+  display: none;
+}
+
+.slides {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img.displaySlide{
+  display: block;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.buttons button{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  padding: 10px 15px;
+  background-color: hsla(0, 0%, 0%, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+@keyframes fade {
+  from {opacity: .5}
+  to {opacity: 1}
+}
